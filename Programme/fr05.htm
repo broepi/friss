@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Friss! Website / Strecke</title>
+</head>
+<body>
+<img src="./../Bilder/Logo.jpg" width="120" height="120"><br>
+<a href="./../Bilder/Logo.jpg">originale Datei</a><br>
+<img src="./../Bilder/Logo6.jpg" width="90" height="90"><br>
+<a href="./../Bilder/Logo6.jpg">originale Datei</a><br>
+<p>
+<h1>Strecke</h1>
+<p>
+Strecke ist ein Programm, welches prüft, ob <i>count</i> Byte-Werte ab <i>str1</i> identisch zu den <i>count</i> Byte-Werten ab <i>str2</i> sind.
+</p>
+<p>
+<h2>Eine stichpunktartige Liste an allgemeinen Informationen über Strecke</h2>
+<ul>
+<li>Quelltextformat: Funktion, kodiert in der Sprache C++<br>
+<li>Charakter: Text
+<li>Größe: 156 Bytes
+<li>Abhängigkeit: keine
+</ul>
+<p>
+<h2>Ein Hyperlink, der zu einer Datei führt, welche Strecke enthält</h2>
+<a href="https://github.com/broepi/friss/raw/master/fr05/fr05.cpp">fr05.cpp</a>
+<p>
+<h2>Der Quelltext von Strecke, kodiert in der Sprache C++</h2>
+<pre>
+
+bool strecke (char *str1, char *str2, int count)
+{
+	for( ; count&gt;0; count--) {
+		if(str1[count-1]!=str2[count-1]) return false;
+	}
+	return true;
+}
+
+</pre>
+<p>
+<h2>Hyperlink zu dem Dokument, welches eine Liste der Programme von Friss! enthält</h2>
+<a href="./../Programme.htm">Programme.htm</a>
+</body>
+</html>

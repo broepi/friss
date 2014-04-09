@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Friss! Website / Friss das!</title>
+</head>
+<body>
+<img src="./../Bilder/Logo.jpg" width="120" height="120"><br>
+<a href="./../Bilder/Logo.jpg">originale Datei</a><br>
+<img src="./../Bilder/Logo2.jpg" width="90" height="90"><br>
+<a href="./../Bilder/Logo2.jpg">originale Datei</a><br>
+<p>
+<h1>Friss das!</h1>
+</p>
+<p>
+Friss das! ist ein Programm. Wenn man es ausführt, verfällt es in eine Endloschleife, welche durch einen Sprungbefehl bewirkt wird, welcher die Programmausführung an der Speicheradresse unmittelbar vor sich selbst fortsetzt.
+</p>
+<p>
+<h2>Eine stichpunktartige Liste an allgemeinen Informationen über Friss das!</h2>
+<ul>
+<li>Ausführungsformat: Aneinanderreihung von Intel IA32 Instruktionen<br>
+<li>Charakter: binär
+<li>Größe: 7 Bytes (56 Bits)
+</ul>
+</p>
+<p>
+<h2>Ein Hyperlink, der zu einer Datei führt, welche Friss das! enthält</h2>
+<a href="https://github.com/broepi/friss/raw/master/fr01/fr01">fr01</a>
+</p>
+<p>
+<h2>Eine Beschreibung der günstigsten Möglichkeit Friss das! auszuführen</h2>
+Friss das! kann durch einen Prozessor der Intel IA32 Architektur oder durch einem zu ihr kompatiblen ausgeführt werden. Dies sollte geschehen, während das Programm an der linearen physikalischen Speicheradresse 7C00<sub>h</sub> gespeichert ist und der Prozessor sich im 16 Bit Modus befindet. Diese Bedingungen sind gegeben, wenn das BIOS, nachdem der PC eingeschalten wurde und es seine Aufgaben erledigt hat, die ersten 512 Bytes Daten vom Bootlaufwerk ließt, diese an der genannten Adresse speichert und an dieser Adresse die Ausführung fortsetzt. Das Bootlaufwerk ist das Laufwerk, von dem die ersten 512 Bytes Daten gelesen werden. Welches Laufwerk das Bootlaufwerk ist hängt von der BIOS Konfiguration und der Verfügbarkeit der Laufwerke ab. Das kann zum Beispiel das 3,5" Diskettenlaufwerk sein, sofern in ihm eine Diskette eingelegt ist.
+</p>
+<p>
+Wenn Sie das Programm Friss das! ausführen wollen, ist es das günstigste, der folgenden Anleitung zu folgen.
+</p>
+<p>
+Falls Sie das Betriebssystem Windows benutzen, dann lesen Sie diesen Absatz. Laden Sie den Hex Editor tiny hexer herunter, indem Sie folgendem Hyperlink zu einer Seite folgen, von der tiny hexer heruntergeladen werden kann, und wählen Sie den Hyperlink zum Installationsprogramm, um dieses herunterzuladen. <a href="http://www.mirkes.de/de/freeware/tinyhex.php">http://www.mirkes.de/de/freeware/tinyhex.php</a>. Installieren Sie das Programm auf ihrem PC. Legen Sie nun eine Diskette in ihr Diskettenlaufwerk ein, die keine Daten enthält, die Sie noch brauchen. Starten Sie jetzt tiny hexer. Wählen Sie aus der Menüleiste Datei, dann Datenträger, dann Datenträger öffnen.... Wählen Sie aus der nun erschienenen Liste Datenträger A: aus und wählen Sie OK. Es erscheint eine Ansicht, welche die ersten 512 Bytes Daten der Diskette in hexadezimaler Form enthält. Öffnen Sie nun die Datei, welche Friss das! enthält um auch ihren Inhalt hexadezimal darstellen zu lassen. Kopieren Sie Friss das! in die ersten 7 Bytes der Diskette wie Sie es aus einem Texteditor gewohnt sind. Wenn Sie die kopierten Daten dort einfügen, werden die ersten 7 Bytes Daten der Diskette gelöscht. Die eingefügten Daten werden an deren Position gespeichert. Beschreiben Sie außerdem noch die letzten zwei Bytes im Fenster der Diskettendaten mit den Werten 55<sub>h</sub> und AA<sub>h</sub>. tiny hexer hat jetzt die Änderung nur an einer Kopie der ersten 512 Bytes Daten im Arbeitsspeicher vorgenommen. Um die Daten dieser Kopie im Arbeitspeicher auf der Diskette an der Adresse 0 zu übertragen, wählen Sie Speichern, während das Fenster der Diskettendaten aktiv ist und bestätigen Sie im folgendem Dialogfeld mit OK.
+</p>
+<p>
+Falls Sie das Betriebssystem Linux oder UNIX benutzen, dann können Sie leider nicht fortfahren, mithilfe dieser Anleitung Friss das! auszuführen. In Zukunft soll sich in diesem Absatz eine Anleitung befinden, wie man das mit diesen Betriebssystemen tut. Momentan müssen sie selbständig eine analoge Lösung finden.
+</p>
+<p>
+Falls Sie ein anderes Betriebssystem benutzen, als Micrsoft Windows, Linux oder UNIX, dann finden Sie selbstständig eine analoge Lösung.
+</p>
+<p>
+Um Friss das! auszuführen, starten Sie jetzt einen PC, in desem Diskettenlaufwerk die eben bearbeitete Diskette eingelegt ist und während das BIOS so konfiguriert, dass das Diskettenlaufwerk als Bootlaufwerk benutzt wird. Um das Programm abzubrechen entfernen Sie die Diskette aus dem Diskettenlaufwerk und starten Sie den Computer neu oder schalten Sie ihn aus. Das können Sie nun so oft und an jedem PC machen, wie und an dem Sie wollen ohne die Diskette nochmals wie in den zu vor beschriebenen Schritten zu bearbeiten.
+</p>
+<p>
+<h2>Analyse zu Friss das!</h2>
+Wahrscheinlich werden Sie denken, dass es zu einem Computerprogramm heutzutage immmer einen Quelltext gibt. Das ist bei Friss das! nicht der Fall. Friss das! wurde vollständig direkt in einem Hex Editor geschrieben. Angewandt wurde dabei die Referenz der Intel IA32 Instruktionen. Der folgend aufgezeichnete Text ist die Ausgabe, die entsteht, wenn man Friss das! mit dem Netwide Disassembler disassembliert.
+</p>
+<p>
+<pre>
+00000000  EA057C0000        jmp 0x0:0x7c05
+00000005  EBFE              jmp short 0x5
+</pre>
+</p>
+<p>
+Friss das! besteht, wie man sieht, aus zwei Instruktionen. Die erste Instruktion veranlasst, dass die Codeausführung bei der zweiten Instruktion fortgesetzt wird. Das scheint bei der ersten Betrachtung ziemlich sinnlos, Erst, wenn wir in Betracht ziehen, dass dieser Sprung außerdem veranlasst, dass das Register cs den Wert 0 annimmt, ergibt es einen Sinn. Doch dieser Sinn geht wieder verloren, wenn wir dann noch betrachten, dass das cs Register ohnehin 0 ist, bevor Friss das! ausgeführt wird. Die zweite Instruktion, veranlasst die Codeausführung vor sich selbst. Diese Instruktion wird also wieder ausgeführt. Die erwartete Endlosschleife tritt dann in Kraft. Der Operand dieser Instruktion hat eine zum aktuellen Wert im Register ip relative Adresse, welche die Sprungadresse darstellt.
+</p>
+<p>
+<h2>Hyperlink zu dem Dokument, welches eine Liste der Programme von Friss! enthält</h2>
+<a href="./../Programme.htm">Programme.htm</a>
+</p>
+</body>
+</html>

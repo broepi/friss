@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Friss! Website / Prüfe!</title>
+</head>
+<body>
+<img src="./../Bilder/Logo.jpg" width="120" height="120"><br>
+<a href="./../Bilder/Logo.jpg">originale Datei</a><br>
+<img src="./../Bilder/Logo3.gif" width="200" height="100"><br>
+<a href="./../Bilder/Logo3.gif">originale Datei</a><br>
+<p>
+<h1>Prüfe!</h1>
+</p>
+<p>
+Prüfe! ist ein Programm, welches prüft ob ein Byte-Wert zu einer Byte-Menge gehört.
+</p>
+<p>
+<h2>Eine stichpunktartige Liste an allgemeinen Informationen über Prüfe!</h2>
+<ul>
+<li>Quelltextformat: Funktion, kodiert in der Sprache C++<br>
+<li>Charakter: Text
+<li>Größe: 150 Bytes
+</ul>
+</p>
+<p>
+<h2>Ein Hyperlink, der zu einer Datei führt, welche Prüfe! enthält</h2>
+<a href="https://github.com/broepi/friss/raw/master/fr02/fr02.cpp">fr02.cpp</a>
+</p>
+<p>
+<h2>Der Quelltext von Prüfe!, kodiert in der Sprache C++</h2>
+<pre>
+
+bool pruefe(char byte, char *byteset, int count)
+{
+	for( ; count&gt;0; count--) {
+		if(byte == byteset[count-1]) return true;
+	}
+	return false;
+}
+
+</pre>
+</p>
+<p>
+<h2>Hyperlink zu dem Dokument, welches eine Liste der Programme von Friss! enthält</h2>
+<a href="./../Programme.htm">Programme.htm</a>
+</p>
+</body>
+</html>

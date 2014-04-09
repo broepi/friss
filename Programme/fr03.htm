@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Friss! Website / Und? Jetzt?</title>
+</head>
+<body>
+<img src="./../Bilder/Logo.jpg" width="120" height="120"><br>
+<a href="./../Bilder/Logo.jpg">originale Datei</a><br>
+<img src="./../Bilder/Logo4.jpg" width="200" height="100"><br>
+<a href="./../Bilder/Logo4.jpg">originale Datei</a><br>
+<p>
+<h1>Und? Jetzt?</h1>
+</p>
+<p>
+Und? Jetzt? ist ein Programm, welches prüft, wieviel Byte-Werte ab Offset x bis maximal x+<i>l</i> zu einer Byte-Menge gehören.
+</p>
+<p>
+<h2>Eine stichpunktartige Liste an allgemeinen Informationen über Und? Jetzt?</h2>
+<ul>
+<li>Quelltextformat: Funktion, kodiert in der Sprache C++<br>
+<li>Charakter: Text
+<li>Größe: 211 Bytes
+<li>Abhängigkeit: Prüfe!
+</ul>
+</p>
+<p>
+<h2>Ein Hyperlink, der zu einer Datei führt, welche Und? Jetzt? enthält</h2>
+<a href="https://github.com/broepi/friss/raw/master/fr03/fr03.cpp">fr03.cpp</a>
+</p>
+<p>
+<h2>Der Quelltext von Und? Jetzt?, kodiert in der Sprache C++</h2>
+<pre>
+
+bool pruefe(char byte, char *byteset, int count);
+
+int und_jetzt(char *start, int length, char *byteset, int count)
+{
+	int i;
+	for(i=0; i&lt;length && pruefe(start[i], byteset, count); i++);
+	return i;
+}
+
+</pre>
+</p>
+<p>
+<h2>Hyperlink zu dem Dokument, welches eine Liste der Programme von Friss! enthält</h2>
+<a href="./../Programme.htm">Programme.htm</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Friss! Website / OKAY</title>
+</head>
+<body>
+<img src="./../Bilder/Logo.jpg" width="120" height="120"><br>
+<a href="./../Bilder/Logo.jpg">originale Datei</a><br>
+<img src="./../Bilder/Logo5.jpg" width="90" height="90"><br>
+<a href="./../Bilder/Logo5.jpg">originale Datei</a><br>
+<p>
+<h1>OKAY</h1>
+</p>
+<p>
+OKAY ist ein Programm, welches prüft, wieviel Byte-Werte ab Offset x bis maximal x+<i>l</i> nicht zu einer Byte-Menge gehören.
+</p>
+<p>
+<h2>Eine stichpunktartige Liste an allgemeinen Informationen über OKAY</h2>
+<ul>
+<li>Quelltextformat: Funktion, kodiert in der Sprache C++<br>
+<li>Charakter: Text
+<li>Größe: 207 Bytes
+<li>Abhängigkeit: Prüfe!
+</ul>
+</p>
+<p>
+<h2>Ein Hyperlink, der zu einer Datei führt, welche OKAY enthält</h2>
+<a href="https://github.com/broepi/friss/raw/master/fr04/fr04.cpp">fr04.cpp</a>
+</p>
+<p>
+<h2>Der Quelltext von OKAY, kodiert in der Sprache C++</h2>
+<pre>
+
+bool pruefe(char byte, char *byteset, int count);
+
+int okay(char *start, int length, char *byteset, int count)
+{
+	int i;
+	for(i=0; i&lt;length && !pruefe(start[i], byteset, count); i++);
+	return i;
+}
+
+</pre>
+</p>
+<p>
+<h2>Hyperlink zu dem Dokument, welches eine Liste der Programme von Friss! enthält</h2>
+<a href="./../Programme.htm">Programme.htm</a>
+</p>
+</body>
+</html>
